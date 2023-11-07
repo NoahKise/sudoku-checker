@@ -29,6 +29,9 @@ export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, ro
 }
 
 SudokuBoard.prototype.winCheck = function () {
-    let result = "";
+    const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let result = testArray.every(i => this.row1.includes(i));
     return result;
 }
+
+        // reusableTestArray.every(i => reusableSudoku.row1.includes(i));

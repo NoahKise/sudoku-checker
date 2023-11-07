@@ -44,7 +44,6 @@ describe('SudokuBoard.prototype.winCheck', () => {
 
     test('should correctly determine if sudokuBoard.row1 contains each intiger from 1 to 9', () => {
         let result = reusableSudoku.winCheck();
-        // reusableTestArray.every(i => reusableSudoku.row1.includes(i));
         expect(result).toEqual(true);
     })
 })
