@@ -31,9 +31,8 @@ export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, ro
 SudokuBoard.prototype.winCheck = function () {
     const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let result = true;
-
     for (let i = 0; i < 27; i++) {
-        if (!testArray.every(j => this[`row${i + 1}`].includes(j))); {
+        if (!testArray.every(j => this[`row${i + 1}`].includes(j))) {
             result = false;
             break;
         }
