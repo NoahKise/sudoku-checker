@@ -27,3 +27,8 @@ export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, ro
     this.box8 = box8;
     this.box9 = box9;
 }
+
+SudokuBoard.prototype.winCheck = function () {
+    let result = "";
+    return result;
+}
