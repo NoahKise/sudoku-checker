@@ -12,6 +12,7 @@ h1 {
 input {
   width: 70px;
   height: 70px;
+  background-color: antiquewhite;
 }
 
 #mainBoard {
@@ -22,6 +23,8 @@ input {
 
 table {
   border: 3px solid black;
+  background-image: url(/img/newboard.png);
+  background-size: cover;
 }
 
 button {
@@ -29,4 +32,6 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  font-family: fantasy;
+  padding-top: 7px;
 }
