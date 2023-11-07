@@ -1,4 +1,4 @@
-export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, row8, row9, col1, col2, col3, col4, col5, col6, col7, col8, col9, box1, box2, box3, box4, box5, box6, box7, box8, box9){
+export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12, row13, row14, row15, row16, row17, row18, row19, row20, row21, row22, row23, row24, row25, row26, row27) {
     this.row1 = row1;
     this.row2 = row2;
     this.row3 = row3;
@@ -8,29 +8,36 @@ export default function SudokuBoard(row1, row2, row3, row4, row5, row6, row7, ro
     this.row7 = row7;
     this.row8 = row8;
     this.row9 = row9;
-    this.col1 = col1;
-    this.col2 = col2;
-    this.col3 = col3;
-    this.col4 = col4;
-    this.col5 = col5;
-    this.col6 = col6;
-    this.col7 = col7;
-    this.col8 = col8;
-    this.col9 = col9;
-    this.box1 = box1;
-    this.box2 = box2;
-    this.box3 = box3;
-    this.box4 = box4;
-    this.box5 = box5;
-    this.box6 = box6;
-    this.box7 = box7;
-    this.box8 = box8;
-    this.box9 = box9;
+    this.row10 = row10;
+    this.row11 = row11;
+    this.row12 = row12;
+    this.row13 = row13;
+    this.row14 = row14;
+    this.row15 = row15;
+    this.row16 = row16;
+    this.row17 = row17;
+    this.row18 = row18;
+    this.row19 = row19;
+    this.row20 = row20;
+    this.row21 = row21;
+    this.row22 = row22;
+    this.row23 = row23;
+    this.row24 = row24;
+    this.row25 = row25;
+    this.row26 = row26;
+    this.row27 = row27;
 }
 
 SudokuBoard.prototype.winCheck = function () {
     const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let result = testArray.every(i => this.row1.includes(i));
+    let result = true;
+
+    for (let i = 0; i < 27; i++) {
+        if (!testArray.every(j => this[`row${i + 1}`].includes(j))); {
+            result = false;
+            break;
+        }
+    }
     return result;
 }
 
