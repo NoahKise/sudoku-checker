@@ -1,0 +1,8 @@
+body {
+    background-color: green;
+}
+
+#mainBoard {
+    border: 1px solid black;
+    background-color: blue;
+}
