@@ -35,3 +35,9 @@ button {
   font-family: fantasy;
   padding-top: 7px;
 }
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 70px;
+}
